@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culinary Catalog & Coffee Menu | El Cafezito Phoenix</title>
+  <meta name="description" content="Explore the full culinary and coffee menu of El Cafezito in Phoenix, AZ. Every specialty latte, clay-pot Café de Olla, ceremonial matcha, artisan crêpes, and Latin comfort dishes.">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. CINEMATIC INTRO PRELOADER (0.8s - 1.0s)
+       ======================================================================== -->
+  <div class="preloader" id="sitePreloader">
+    <div class="preloader-inner">
+      <div class="preloader-glow"></div>
+      <div class="preloader-logo-wrap">
+        <img src="assets/logo.svg" alt="El Cafezito Official Logo">
+      </div>
+      <p class="preloader-slogan" data-i18n="preloaderQuote2">"Compartimos sabores frescos del mercado"</p>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. CONTINUOUS 3D FLOATING CAFE ENVIRONMENT
+       ======================================================================== -->
+  <div class="ambient-3d-scene" aria-hidden="true">
+    <div class="floating-sun-orb"></div>
+    <div class="floating-sage-orb"></div>
+
+    <!-- Handcrafted Ceramic Mug with Rising Steam -->
+    <div class="floating-3d-item floating-mug">
+      <div style="position: relative; width: 68px; height: 56px;">
+        <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 15 15 C 15 15, 12 60, 45 60 C 78 60, 75 15, 75 15 Z" fill="#F3ECE1" stroke="#241711" stroke-width="3" />
+          <ellipse cx="45" cy="16" rx="30" ry="8" fill="#3D2820" />
+          <ellipse cx="45" cy="16" rx="22" ry="5" fill="#D4A373" opacity="0.7" />
+          <path d="M 72 24 C 88 24, 88 50, 70 52" fill="none" stroke="#241711" stroke-width="4.5" stroke-linecap="round" />
+        </svg>
+        <div class="steam-wisp"></div>
+        <div class="steam-wisp"></div>
+        <div class="steam-wisp"></div>
+      </div>
+    </div>
+
+    <!-- Roasted Beans -->
+    <div class="floating-3d-item floating-bean-1">
+      <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="20" cy="25" rx="15" ry="22" fill="#D27A56" opacity="0.65" />
+        <path d="M 10 25 C 16 15, 24 35, 30 25" stroke="#FAF8F5" stroke-width="2.5" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div class="floating-3d-item floating-bean-2">
+      <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="20" cy="25" rx="14" ry="20" fill="#241711" opacity="0.5" />
+        <path d="M 12 25 C 18 16, 22 34, 28 25" stroke="#D4A373" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <!-- Botanical Sage Leaf -->
+    <div class="floating-3d-item floating-botanical">
+      <svg viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 30 95 C 30 70, 5 50, 5 25 C 5 5, 30 0, 30 0 C 30 0, 55 5, 55 25 C 55 50, 30 70, 30 95 Z" fill="#6B7F6D" opacity="0.4" />
+        <path d="M 30 10 L 30 90" stroke="#FAF8F5" stroke-width="1.5" opacity="0.6" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       3. PERSISTENT NAVIGATION HEADER (COLLISION-PROOF ON ALL SCREENS)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-anchor" aria-label="El Cafezito Home">
+        <img src="assets/logo.svg" alt="El Cafezito" class="brand-logo-img">
+        <div class="brand-title-group">
+          <span class="brand-title">El Cafezito <span class="accent">.</span></span>
+          <span class="brand-subtitle" data-i18n="brandSubtitle">Artisan Coffee & Kitchen</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Hidden under 1140px, moved to mobile drawer) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="navHome">Home</a></li>
+          <li><a href="index.html#story" class="nav-link" data-i18n="navStory">Our Story</a></li>
+          <li><a href="index.html#specialties" class="nav-link" data-i18n="navSpecialties">Specialties</a></li>
+          <li><a href="index.html#atmosphere" class="nav-link" data-i18n="navAtmosphere">Atmosphere</a></li>
+          <li><a href="index.html#visit" class="nav-link" data-i18n="navVisit">Visit & Hours</a></li>
+          <li><a href="menu.html" class="nav-link active" style="color: var(--color-terracotta); font-weight: 800;" data-i18n="navMenu">Culinary Menu</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <!-- Language Selector Dropdown with Auto-Detection -->
+        <div class="lang-selector-dropdown" id="langSelector">
+          <button class="btn-lang-trigger" id="btnLangTrigger" aria-label="Select Language">
+            <span class="lang-flag">🌐</span>
+            <span class="lang-label">Auto</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown-menu">
+            <button data-lang="auto" class="lang-option-btn selected"><span>🌐 Auto Detect (Browser)</span></button>
+            <button data-lang="en" class="lang-option-btn"><span>🇺🇸 English</span></button>
+            <button data-lang="es" class="lang-option-btn"><span>🇲🇽 Español</span></button>
+            <button data-lang="fr" class="lang-option-btn"><span>🇫🇷 Français</span></button>
+            <button data-lang="de" class="lang-option-btn"><span>🇩🇪 Deutsch</span></button>
+            <button data-lang="pt" class="lang-option-btn"><span>🇧🇷 Português</span></button>
+            <button data-lang="it" class="lang-option-btn"><span>🇮🇹 Italiano</span></button>
+            <button data-lang="ja" class="lang-option-btn"><span>🇯🇵 日本語</span></button>
+            <button data-lang="zh" class="lang-option-btn"><span>🇨🇳 简体中文</span></button>
+            <button data-lang="ru" class="lang-option-btn"><span>🇷🇺 Русский</span></button>
+          </div>
+        </div>
+
+        <!-- Live Hours Status Pill (Calculated via Phoenix local time) -->
+        <div class="live-status-pill">
+          <span class="pulse-dot"></span>
+          <span>Open Now • Closes 7:00 PM (PHX)</span>
+        </div>
+
+        <!-- Off-Canvas Bag Trigger -->
+        <button class="btn-bag-trigger" onclick="openBagDrawer()" aria-label="View Order Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="bag-count-badge">0</span>
+        </button>
+
+        <button class="btn-primary header-cta-btn" style="padding: 9px 20px;" onclick="openBagDrawer()">
+          <span data-i18n="btnViewBag">View Bag</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MOBILE NAVIGATION DRAWER & BACKDROP
+       ======================================================================== -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="closeMobileNav()"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="mobile-nav-brand">
+        <img src="assets/logo.svg" alt="El Cafezito">
+        <div>
+          <strong style="font-size: 1.15rem; color: var(--color-espresso); display: block; line-height: 1;">El Cafezito</strong>
+          <span style="font-size: 0.7rem; color: var(--color-espresso-light);" data-i18n="brandSubtitle">Artisan Coffee & Kitchen</span>
+        </div>
+      </div>
+      <button class="btn-mobile-nav-close" onclick="closeMobileNav()" aria-label="Close Navigation">✕</button>
+    </div>
+
+    <div class="mobile-nav-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item"><a href="index.html" onclick="closeMobileNav()"><span data-i18n="navHome">Home</span> <span>→</span></a></li>
+        <li class="mobile-nav-item"><a href="index.html#story" onclick="closeMobileNav()"><span data-i18n="navStory">Our Story</span> <span>→</span></a></li>
+        <li class="mobile-nav-item"><a href="index.html#specialties" onclick="closeMobileNav()"><span data-i18n="navSpecialties">Specialties</span> <span>→</span></a></li>
+        <li class="mobile-nav-item"><a href="index.html#atmosphere" onclick="closeMobileNav()"><span data-i18n="navAtmosphere">Atmosphere</span> <span>→</span></a></li>
+        <li class="mobile-nav-item"><a href="index.html#visit" onclick="closeMobileNav()"><span data-i18n="navVisit">Visit & Hours</span> <span>→</span></a></li>
+        <li class="mobile-nav-item"><a href="menu.html" onclick="closeMobileNav()" style="color: var(--color-terracotta); font-weight: 800;"><span data-i18n="navMenu">Culinary Menu (48+)</span> <span>→</span></a></li>
+      </ul>
+
+      <div class="mobile-lang-section">
+        <div class="mobile-lang-title">
+          <span>🌐</span> <span>Select Language / Idioma</span>
+        </div>
+        <div class="mobile-lang-chips">
+          <button data-lang="auto" class="mobile-lang-chip active">🌐 Auto</button>
+          <button data-lang="en" class="mobile-lang-chip">🇺🇸 English</button>
+          <button data-lang="es" class="mobile-lang-chip">🇲🇽 Español</button>
+          <button data-lang="fr" class="mobile-lang-chip">🇫🇷 Français</button>
+          <button data-lang="de" class="mobile-lang-chip">🇩🇪 Deutsch</button>
+          <button data-lang="pt" class="mobile-lang-chip">🇧🇷 Português</button>
+          <button data-lang="it" class="mobile-lang-chip">🇮🇹 Italiano</button>
+          <button data-lang="ja" class="mobile-lang-chip">🇯🇵 日本語</button>
+          <button data-lang="zh" class="mobile-lang-chip">🇨🇳 中文</button>
+          <button data-lang="ru" class="mobile-lang-chip">🇷🇺 Русский</button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer-status-card">
+        <!-- Live status dynamically populated -->
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+        <button class="btn-primary" style="justify-content: center; width: 100%;" onclick="openBagDrawer()">
+          <span data-i18n="btnViewBag">View Bag</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ========================================================================
+         4. DEDICATED MENU PAGE HEADER & SEARCH
+         ======================================================================== -->
+    <section class="menu-page-header">
+      <div class="menu-header-inner">
+        <span class="section-label" data-i18n="menuHeaderLabel">Artisan Roastery & Scratch Kitchen</span>
+        <h1 class="section-title" data-i18n="menuHeaderTitle">The Culinary & Coffee Catalog</h1>
+        <p style="color: var(--color-espresso-light); font-size: 1.1rem; line-height: 1.6; max-width: 680px; margin: 0 auto;" data-i18n="menuHeaderDesc">
+          Transcribed directly from our cafe boards and recipe archives. Every beverage, slow elixir, scratch crêpe, and comforting plate is prepared fresh to order.
+        </p>
+
+        <!-- Instant Real-Time Search Bar -->
+        <div class="menu-search-bar">
+          <span class="menu-search-icon">🔍</span>
+          <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search by name, ingredient, tasting note (e.g., 'Canela', 'Matcha', 'Crêpe', 'Oat')..." data-i18n-placeholder="searchPlaceholder">
+          <span class="menu-clear-btn" id="menuClearSearchBtn" title="Clear search">✕</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. STICKY CATEGORY FILTER BAR
+         ======================================================================== -->
+    <nav class="category-filter-nav" aria-label="Menu Category Filter">
+      <div class="category-scroll-container" id="categoryScrollContainer">
+        <!-- Rendered dynamically with localized labels by app.js -->
+      </div>
+    </nav>
+
+    <!-- ========================================================================
+         6. COMPREHENSIVE MENU GRID CATALOG
+         ======================================================================== -->
+    <section class="menu-catalog-section">
+      <!-- Empty Search State -->
+      <div class="empty-menu-state" id="emptyMenuState">
+        <div class="empty-menu-icon">☕</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--color-espresso); margin-bottom: 8px;" data-i18n="emptyMenuTitle">No Culinary Offerings Found</h3>
+        <p style="color: var(--color-espresso-light); max-width: 440px; margin: 0 auto 20px;" data-i18n="emptyMenuDesc">
+          We couldn't find an item matching your search term. Try searching for 'Latte', 'Horchata', 'Vegan', or browse by category above.
+        </p>
+      </div>
+
+      <!-- Main Dynamic Catalog Container -->
+      <div id="menuCatalogContainer">
+        <!-- Injected dynamically with 3D Tilt Cards by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       7. OFF-CANVAS ORDER BAG (PICKUP DRAWER)
+       ======================================================================== -->
+  <div class="bag-drawer-backdrop" id="bagDrawerBackdrop" onclick="closeBagDrawer()"></div>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Order Bag">
+    <div class="bag-drawer-header">
+      <div class="bag-drawer-title-group">
+        <h3 class="bag-drawer-title" data-i18n="bagTitle">Your Order Bag</h3>
+        <span class="bag-pickup-tag" data-i18n="bagPickupTag">Counter Pickup</span>
+      </div>
+      <button class="btn-drawer-close" onclick="closeBagDrawer()" aria-label="Close Bag">✕</button>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="bag-drawer-items" id="bagItemsContainer">
+      <!-- Items dynamically injected by app.js -->
+    </div>
+
+    <!-- Bag Summary & Checkout Action -->
+    <div class="bag-drawer-footer">
+      <div class="pickup-estimator">
+        <span>⏱️</span>
+        <div data-i18n="readyInEstimator">Ready in <strong>10–15 mins</strong> at Phoenix Express Counter</div>
+      </div>
+
+      <div class="bag-summary-row">
+        <span data-i18n="subtotalLabel">Subtotal</span>
+        <strong id="bagSubtotal">$0.00</strong>
+      </div>
+      <div class="bag-summary-row">
+        <span data-i18n="taxLabel">Est. Hospitality Tax (8.6%)</span>
+        <strong id="bagTax">$0.00</strong>
+      </div>
+      <div class="bag-summary-row total-row">
+        <span data-i18n="totalDueLabel">Total Due at Pickup</span>
+        <strong id="bagTotal" style="color: var(--color-terracotta);">$0.00</strong>
+      </div>
+
+      <button class="btn-checkout-pickup" id="btnCheckoutPickup" onclick="openCheckoutModal()">
+        <span data-i18n="btnProceedPickup">Proceed to Pickup Details</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       8. ORDER CHECKOUT / CONFIRMATION MODAL
+       ======================================================================== -->
+  <div class="checkout-modal-backdrop" id="checkoutModal">
+    <div class="checkout-modal-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--color-espresso);" data-i18n="modalConfirmTitle">Confirm Counter Pickup</h3>
+        <button onclick="closeCheckoutModal()" style="font-size: 1.2rem; cursor: pointer; color: var(--color-espresso-light);">✕</button>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--color-espresso-light); margin-bottom: 24px;" data-i18n="modalDisclaimer">
+        Direct client prototype order. No 3rd-party commissions. Pay at counter upon barista handoff.
+      </p>
+
+      <form id="checkoutForm" onsubmit="processSimulatedOrder(event)">
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; color: var(--color-espresso);" data-i18n="labelYourName">Your Name</label>
+          <input type="text" id="customerName" required placeholder="e.g. Mateo Vargas" data-i18n-placeholder="placeholderName" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--color-border); font-size: 0.95rem;">
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; color: var(--color-espresso);" data-i18n="labelMobilePhone">Mobile Phone (for SMS Ready Alert)</label>
+          <input type="tel" id="customerPhone" required placeholder="(602) 555-0199" data-i18n-placeholder="placeholderPhone" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--color-border); font-size: 0.95rem;">
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; color: var(--color-espresso);" data-i18n="labelPickupTime">Desired Pickup Time</label>
+          <select id="pickupTimeSelect" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--color-border); font-size: 0.95rem; background: var(--color-white);">
+            <option data-i18n="pickupOpt1">ASAP (10–15 Minutes)</option>
+            <option data-i18n="pickupOpt2">In 25 Minutes</option>
+            <option data-i18n="pickupOpt3">In 45 Minutes</option>
+            <option data-i18n="pickupOpt4">Custom Scheduled Today</option>
+          </select>
+        </div>
+
+        <div style="background: var(--color-cream); padding: 14px 18px; border-radius: var(--radius-md); display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+          <span style="font-weight: 700; color: var(--color-espresso);" data-i18n="modalTotalLabel">Total Amount:</span>
+          <strong id="checkoutModalTotal" style="font-size: 1.25rem; color: var(--color-terracotta);">$0.00</strong>
+        </div>
+
+        <button type="submit" class="btn-checkout-pickup">
+          <span data-i18n="btnPlaceOrder">Place Pickup Order</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       9. PERSISTENT LUXURY FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-bio">
+          <div class="footer-logo-row">
+            <img src="assets/logo.svg" alt="El Cafezito" class="footer-logo-img">
+            <div>
+              <h4 style="font-size: 1.3rem; font-weight: 800; color: var(--color-white);">El Cafezito</h4>
+              <span style="font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--color-gold);" data-i18n="brandSubtitle">Artisan Coffee & Kitchen</span>
+            </div>
+          </div>
+          <p class="footer-p" data-i18n="footerBio">
+            Where Scandinavian calm meets Latin passion. Fresh roasted single-origin coffees, slow-simmered traditional canela brews, hand-spun crêpes, and a sunlit desert atmosphere.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="footer-title" data-i18n="footerNavTitle">Navigation</h5>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link" data-i18n="navHome">Home Showcase</a></li>
+            <li><a href="menu.html" class="footer-link" style="color: var(--color-gold);" data-i18n="navMenu">Digital Culinary Menu (48+)</a></li>
+            <li><a href="index.html#story" class="footer-link" data-i18n="navStory">Our Heritage Story</a></li>
+            <li><a href="index.html#specialties" class="footer-link" data-i18n="navSpecialties">Specialty Drinks</a></li>
+            <li><a href="index.html#atmosphere" class="footer-link" data-i18n="navAtmosphere">Patio & Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title" data-i18n="footerLinesTitle">Culinary Lines</h5>
+          <ul class="footer-links-list">
+            <li><a href="menu.html" class="footer-link" data-i18n="catSpecialties">La Lechera & Specialties</a></li>
+            <li><a href="menu.html" class="footer-link" data-i18n="badgeCafeDeOlla">Café de Olla in Clay Pots</a></li>
+            <li><a href="menu.html" class="footer-link" data-i18n="badgeCrepes">Artisan Sweet & Savory Crêpes</a></li>
+            <li><a href="menu.html" class="footer-link" data-i18n="catVeganPlantbased">Plant-Based & Vegan Plates</a></li>
+            <li><a href="menu.html" class="footer-link" data-i18n="catCocktailsBar">Craft Brunch Cocktails</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-title" data-i18n="footerHoursTitle">Phoenix Hours</h5>
+          <p style="font-size: 0.9rem; color: rgba(250, 248, 245, 0.75); line-height: 1.7; margin-bottom: 12px;">
+            <strong>Mon – Sat:</strong> 7:00 AM – 7:00 PM<br>
+            <strong>Sunday:</strong> 8:00 AM – 5:00 PM
+          </p>
+          <p style="font-size: 0.85rem; color: var(--color-gold);">
+            1428 E McDowell Rd, Phoenix, AZ<br>
+            Phone: +1 (602) 555-CAFE
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footerCopyright">© 2026 El Cafezito. All Rights Reserved. Crafted for Client Presentation & High-End Deployment.</div>
+        <div data-i18n="footerTechNote">Designed with Scandinavian Warm Minimalism & Pure Vanilla JS.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

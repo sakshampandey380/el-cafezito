@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Subtle luxury gradient for the dark badge -->
+    <radialGradient id="badgeGradient" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#231B17" />
+      <stop offset="70%" stop-color="#140E0B" />
+      <stop offset="100%" stop-color="#0A0705" />
+    </radialGradient>
+    
+    <!-- Warm gold terracotta gradient for decorative arcs & beans -->
+    <linearGradient id="goldArc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5AF81" />
+      <stop offset="50%" stop-color="#D27A56" />
+      <stop offset="100%" stop-color="#B85D38" />
+    </linearGradient>
+
+    <!-- Warm cream subtle glow -->
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Badge -->
+  <circle cx="250" cy="250" r="236" fill="url(#badgeGradient)" stroke="#2D211A" stroke-width="4" />
+  
+  <!-- Outer subtle hairline ring -->
+  <circle cx="250" cy="250" r="226" fill="none" stroke="#D27A56" stroke-width="1.2" opacity="0.3" stroke-dasharray="6 4" />
+
+  <!-- Top Accent Arc (as seen in original logo) -->
+  <path d="M 135 145 C 190 115, 310 115, 365 145" 
+        fill="none" 
+        stroke="url(#goldArc)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" />
+
+  <!-- Bottom Accent Arc (as seen in original logo) -->
+  <path d="M 105 330 C 175 400, 325 400, 395 330" 
+        fill="none" 
+        stroke="url(#goldArc)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" />
+
+  <!-- Side Whispers -->
+  <path d="M 68 230 C 65 200, 75 170, 95 145" 
+        fill="none" 
+        stroke="url(#goldArc)" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        opacity="0.8" />
+  <path d="M 432 230 C 435 200, 425 170, 405 145" 
+        fill="none" 
+        stroke="url(#goldArc)" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        opacity="0.8" />
+
+  <!-- "El" - Script Calligraphic Style -->
+  <g id="logo-el" transform="translate(250, 195) scale(1.1)">
+    <text x="0" y="0" 
+          text-anchor="middle" 
+          font-family="'Playfair Display', 'Brush Script MT', 'Dancing Script', 'Caveat', cursive, serif" 
+          font-size="82" 
+          font-style="italic" 
+          font-weight="700" 
+          fill="#FFFFFF" 
+          letter-spacing="2"
+          filter="drop-shadow(0px 3px 6px rgba(0,0,0,0.5))">El</text>
+  </g>
+
+  <!-- "Cafezito" - Clean bold modern typography -->
+  <g id="logo-cafezito" transform="translate(250, 305)">
+    <text x="0" y="0" 
+          text-anchor="middle" 
+          font-family="'Outfit', 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" 
+          font-size="78" 
+          font-weight="800" 
+          fill="#FFFFFF" 
+          letter-spacing="-1.5"
+          filter="drop-shadow(0px 4px 8px rgba(0,0,0,0.6))">Cafezito</text>
+  </g>
+
+  <!-- Stylized Roasted Coffee Beans at Bottom -->
+  <g id="coffee-beans" transform="translate(250, 370)">
+    <!-- Left Bean -->
+    <g transform="translate(-32, 0) rotate(-28)">
+      <ellipse cx="0" cy="0" rx="26" ry="17" fill="none" stroke="url(#goldArc)" stroke-width="4.5" />
+      <path d="M -22 0 C -10 -7, 10 7, 22 0" fill="none" stroke="url(#goldArc)" stroke-width="3.5" stroke-linecap="round" />
+    </g>
+    <!-- Right Bean -->
+    <g transform="translate(30, 8) rotate(32)">
+      <ellipse cx="0" cy="0" rx="23" ry="15" fill="none" stroke="url(#goldArc)" stroke-width="4.5" />
+      <path d="M -19 0 C -9 6, 9 -6, 19 0" fill="none" stroke="url(#goldArc)" stroke-width="3.5" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>
